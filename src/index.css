@@ -12,7 +12,7 @@ body {
 }
 
 h4 {
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: rgb(56, 56, 56);
 }
 
@@ -25,4 +25,11 @@ h3 {
 
 a {
   color: rgb(56, 56, 56);
+  text-decoration: none;
+}
+
+.category-list {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0rem;
 }
