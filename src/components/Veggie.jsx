@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
-import { Card, CardMedia, Typography } from "@mui/material";
+import { Box, Card, CardMedia, Typography } from "@mui/material";
 import zIndex from "@mui/material/styles/zIndex";
 
 const Veggie = () => {
@@ -73,6 +73,18 @@ const Veggie = () => {
             >
               {recipe.title}
             </Typography>
+            <Box
+              sx={{
+                position: "absolute",
+                zIndex: "5",
+                width: "100%",
+                height: "100%",
+                background:
+                  "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8))",
+                top: 0,
+                borderRadius: "10px",
+              }}
+            ></Box>
           </SplideSlide>
         ))}
       </Splide>
