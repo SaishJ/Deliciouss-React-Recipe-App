@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
+import { Card, CardMedia, Typography } from "@mui/material";
 
 const Popular = () => {
   const [popular, setPopular] = useState([]);
@@ -30,6 +31,7 @@ const Popular = () => {
 
   return (
     <div>
+      <h3>Popular Picks</h3>
       <Splide
         options={{
           perPage: 4,
@@ -41,7 +43,35 @@ const Popular = () => {
       >
         {popular.map((recipe) => (
           <SplideSlide key={recipe.id}>
-            <h3>{recipe.title}</h3>
+            <Card
+              sx={{
+                position: "relative",
+                zIndex: "3",
+              }}
+            >
+              <CardMedia
+                component="img"
+                height="200"
+                image={recipe.image}
+                alt={recipe.title}
+              />
+            </Card>
+            <Typography
+              variant="subtitle2"
+              component="p"
+              sx={{
+                position: "absolute",
+                zIndex: 10,
+                left: "50%",
+                bottom: "0%",
+                transform: "translate(-50%, 0%)",
+                width: "100%",
+                color: "#fff",
+                fontFamily: "Poppins",
+              }}
+            >
+              {recipe.title}
+            </Typography>
           </SplideSlide>
         ))}
       </Splide>
