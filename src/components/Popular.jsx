@@ -38,7 +38,7 @@ const Popular = () => {
           arrows: false,
           pagination: false,
           drag: "free",
-          gap: "5rem",
+          gap: "3rem",
         }}
       >
         {popular.map((recipe) => (
@@ -47,11 +47,12 @@ const Popular = () => {
               sx={{
                 position: "relative",
                 zIndex: "3",
+                borderRadius: "10px",
               }}
             >
               <CardMedia
                 component="img"
-                height="200"
+                height="180"
                 image={recipe.image}
                 alt={recipe.title}
               />
@@ -68,6 +69,7 @@ const Popular = () => {
                 width: "100%",
                 color: "#fff",
                 fontFamily: "Poppins",
+                textAlign: "center",
               }}
             >
               {recipe.title}
