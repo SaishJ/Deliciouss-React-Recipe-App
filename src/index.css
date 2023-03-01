@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap");
 
 * {
   margin: 0;
@@ -26,6 +27,23 @@ h3 {
 a {
   color: rgb(56, 56, 56);
   text-decoration: none;
+}
+
+.navbar {
+  padding: 2rem 0rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.navbar svg {
+  font-size: 2rem;
+}
+
+.navbar a {
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: "Lobster Two", cursive;
 }
 
 .category-list {
