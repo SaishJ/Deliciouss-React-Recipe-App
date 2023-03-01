@@ -12,6 +12,22 @@ body {
   margin: 0% 20%;
 }
 
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 0px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #313131;
+  border-radius: 10px;
+  height: 200px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
 h4 {
   font-size: 0.8rem;
   color: rgb(56, 56, 56);

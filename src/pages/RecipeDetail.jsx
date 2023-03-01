@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { Box, Stack, Typography } from "@mui/material";
 import Tabs from "../components/Tabs";
+import { motion } from "framer-motion";
 
 const RecipeDetail = () => {
   const [recipe, setRecipe] = useState([]);
@@ -20,7 +21,12 @@ const RecipeDetail = () => {
   console.log("Recipe", recipe);
 
   return (
-    <Box>
+    <motion.div
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <Typography
         variant="h6"
         sx={{ fontFamily: "Poppins", marginBottom: "1rem" }}
@@ -39,7 +45,7 @@ const RecipeDetail = () => {
           <Tabs recipe={recipe} />
         </Box>
       </Stack>
-    </Box>
+    </motion.div>
   );
 };
 

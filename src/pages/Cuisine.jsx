@@ -10,6 +10,7 @@ import {
   Typography,
 } from "@mui/material";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Cuisine = () => {
   const [cuisine, setCuisine] = useState([]);
@@ -44,36 +45,43 @@ const Cuisine = () => {
         {cuisine.map((recipe) => (
           <Grid item xs={2} md={3} lg={4} key={recipe.id}>
             <Link to={`/recipe/${recipe.id}`}>
-              <Card sx={{ borderRadius: 0 }}>
-                <CardMedia
-                  component="img"
-                  height="180"
-                  image={recipe.image}
-                  title={recipe.title}
-                />
-                <CardContent
-                  sx={{
-                    height: "70px",
-                    background: "transparent",
-                    padding: "10px",
-                  }}
-                >
-                  <Typography
-                    variant="subtitle2"
-                    color="text.secondary"
+              <motion.div
+                animate={{ opacity: 1 }}
+                initial={{ opacity: 0 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <Card sx={{ borderRadius: 0 }}>
+                  <CardMedia
+                    component="img"
+                    height="180"
+                    image={recipe.image}
+                    title={recipe.title}
+                  />
+                  <CardContent
                     sx={{
-                      fontFamily: "Poppins",
-                      overflow: "hidden",
-                      textOverflow: "ellipsis",
-                      display: "-webkit-box",
-                      WebkitLineClamp: "2",
-                      WebkitBoxOrient: "vertical",
+                      height: "70px",
+                      background: "transparent",
+                      padding: "10px",
                     }}
                   >
-                    {recipe.title}
-                  </Typography>
-                </CardContent>
-              </Card>
+                    <Typography
+                      variant="subtitle2"
+                      color="text.secondary"
+                      sx={{
+                        fontFamily: "Poppins",
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
+                        display: "-webkit-box",
+                        WebkitLineClamp: "2",
+                        WebkitBoxOrient: "vertical",
+                      }}
+                    >
+                      {recipe.title}
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </motion.div>
             </Link>
           </Grid>
         ))}
