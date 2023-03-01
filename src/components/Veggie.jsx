@@ -3,7 +3,7 @@ import axios from "axios";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import { Box, Card, CardMedia, Typography } from "@mui/material";
-import zIndex from "@mui/material/styles/zIndex";
+import { Link } from "react-router-dom";
 
 const Veggie = () => {
   const [veggie, setVeggie] = useState([]);
@@ -42,49 +42,51 @@ const Veggie = () => {
       >
         {veggie.map((recipe) => (
           <SplideSlide key={recipe.id}>
-            <Card
-              sx={{
-                position: "relative",
-                zIndex: "3",
-                borderRadius: "10px",
-              }}
-            >
-              <CardMedia
-                component="img"
-                height="150"
-                image={recipe.image}
-                alt={recipe.title}
-              />
-            </Card>
-            <Typography
-              variant="subtitle2"
-              component="p"
-              sx={{
-                position: "absolute",
-                zIndex: 10,
-                left: "50%",
-                bottom: "0%",
-                transform: "translate(-50%, 0%)",
-                width: "100%",
-                color: "#fff",
-                fontFamily: "Poppins",
-                textAlign: "center",
-              }}
-            >
-              {recipe.title}
-            </Typography>
-            <Box
-              sx={{
-                position: "absolute",
-                zIndex: "5",
-                width: "100%",
-                height: "100%",
-                background:
-                  "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8))",
-                top: 0,
-                borderRadius: "10px",
-              }}
-            ></Box>
+            <Link to={`/recipe/${recipe.id}`}>
+              <Card
+                sx={{
+                  position: "relative",
+                  zIndex: "3",
+                  borderRadius: "10px",
+                }}
+              >
+                <CardMedia
+                  component="img"
+                  height="150"
+                  image={recipe.image}
+                  alt={recipe.title}
+                />
+              </Card>
+              <Typography
+                variant="subtitle2"
+                component="p"
+                sx={{
+                  position: "absolute",
+                  zIndex: 10,
+                  left: "50%",
+                  bottom: "0%",
+                  transform: "translate(-50%, 0%)",
+                  width: "100%",
+                  color: "#fff",
+                  fontFamily: "Poppins",
+                  textAlign: "center",
+                }}
+              >
+                {recipe.title}
+              </Typography>
+              <Box
+                sx={{
+                  position: "absolute",
+                  zIndex: "5",
+                  width: "100%",
+                  height: "100%",
+                  background:
+                    "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8))",
+                  top: 0,
+                  borderRadius: "10px",
+                }}
+              ></Box>
+            </Link>
           </SplideSlide>
         ))}
       </Splide>
