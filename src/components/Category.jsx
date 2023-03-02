@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import { Button, Chip, Stack } from "@mui/material";
+import { Avatar, Chip, Stack } from "@mui/material";
 import { categories } from "../utils/constant";
 
 const Category = () => {
@@ -25,7 +25,7 @@ const Category = () => {
                 ? "contained"
                 : "outlined"
             }
-            icon={category.icon}
+            avatar=<Avatar>{category.icon}</Avatar>
             label={category.name}
             key={category.name}
           />

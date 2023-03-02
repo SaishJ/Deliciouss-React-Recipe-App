@@ -10,7 +10,7 @@ const App = () => {
   return (
     <Box
       sx={{
-        margin: { xs: "0 20px", sm: "0 30px", md: "0 70px", lg: "0 200px" },
+        margin: { xs: "0 20px", sm: "0 40px", md: "0 70px", lg: "0 200px" },
       }}
     >
       <BrowserRouter>
