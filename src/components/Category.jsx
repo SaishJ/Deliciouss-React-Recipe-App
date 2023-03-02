@@ -1,28 +1,37 @@
 import React from "react";
-import { FaPizzaSlice, FaHamburger } from "react-icons/fa";
-import { GiIndiaGate, GiChopsticks } from "react-icons/gi";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
+import { Button, Chip, Stack } from "@mui/material";
+import { categories } from "../utils/constant";
 
 const Category = () => {
+  const location = useLocation();
+  console.log("Location", location);
+
   return (
-    <div className="category-list">
-      <NavLink className="category-link" to={"/cuisine/Indian"}>
-        <GiIndiaGate />
-        <h4>Indian</h4>
-      </NavLink>
-      <NavLink className="category-link" to={"/cuisine/Italian"}>
-        <FaPizzaSlice />
-        <h4>Italian</h4>
-      </NavLink>
-      <NavLink className="category-link" to={"/cuisine/American"}>
-        <FaHamburger />
-        <h4>American</h4>
-      </NavLink>
-      <NavLink className="category-link" to={"/cuisine/Japanese"}>
-        <GiChopsticks />
-        <h4>Japanese</h4>
-      </NavLink>
-    </div>
+    <Stack
+      direction="row"
+      spacing={{ xs: 1, sm: 2 }}
+      justifyContent="center"
+      alignItems="center"
+      sx={{ margin: "1rem 0" }}
+      flexWrap="wrap"
+    >
+      {categories.map((category) => (
+        <NavLink to={`/cuisine/${category.name}`}>
+          <Chip
+            style={{ cursor: "pointer", marginBottom: "5px" }}
+            variant={
+              `/cuisine/${category.name}` === location.pathname
+                ? "contained"
+                : "outlined"
+            }
+            icon={category.icon}
+            label={category.name}
+            key={category.name}
+          />
+        </NavLink>
+      ))}
+    </Stack>
   );
 };
 

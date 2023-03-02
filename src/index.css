@@ -8,10 +8,6 @@
   font-family: "Poppins", sans-serif;
 }
 
-body {
-  margin: 0% 20%;
-}
-
 /* Scrollbar */
 ::-webkit-scrollbar {
   width: 0px;
@@ -62,40 +58,11 @@ a {
   font-family: "Lobster Two", cursive;
 }
 
-.category-list {
-  display: flex;
-  justify-content: center;
-  margin: 2rem 0rem;
-}
-
 .ingrediant-list {
   font-size: 1rem;
   color: rgb(56, 56, 56);
   line-height: 2rem;
   margin: 1rem 0rem;
-}
-
-.category-link {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  margin: 0 1rem;
-  background: linear-gradient(35deg, #494949, #313131);
-  width: 5rem;
-  height: 5rem;
-  cursor: pointer;
-  transform: scale(0.8);
-  color: white;
-}
-
-.category-link h4 {
-  color: white;
-}
-
-.category-link.active {
-  background: linear-gradient(to right, #f27121, #e94057);
 }
 
 .search-bar {

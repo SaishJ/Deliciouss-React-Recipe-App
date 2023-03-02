@@ -4,15 +4,22 @@ import Category from "./components/Category";
 import { BrowserRouter } from "react-router-dom";
 import SearchBar from "./components/SearchBar";
 import Navbar from "./pages/Navbar";
+import { Box } from "@mui/material";
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Navbar />
-      <SearchBar />
-      <Category />
-      <Pages />
-    </BrowserRouter>
+    <Box
+      sx={{
+        margin: { xs: "0 20px", sm: "0 30px", md: "0 70px", lg: "0 200px" },
+      }}
+    >
+      <BrowserRouter>
+        <Navbar />
+        <SearchBar />
+        <Category />
+        <Pages />
+      </BrowserRouter>
+    </Box>
   );
 };
 
