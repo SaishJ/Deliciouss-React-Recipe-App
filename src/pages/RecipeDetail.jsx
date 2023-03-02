@@ -33,15 +33,15 @@ const RecipeDetail = () => {
       >
         {recipe.title}
       </Typography>
-      <Stack direction="row" spacing={2}>
-        <Box sx={{ width: 400, height: 300 }}>
+      <Stack direction={{ xs: "column", md: "row" }} spacing={2}>
+        <Box sx={{ width: { md: 400 } }}>
           <img
             src={recipe.image}
             alt={recipe.id}
             style={{ objectFit: "cover", width: "100%" }}
           />
         </Box>
-        <Box sx={{ width: 500 }}>
+        <Box sx={{ width: { md: 500 } }}>
           <Tabs recipe={recipe} />
         </Box>
       </Stack>
