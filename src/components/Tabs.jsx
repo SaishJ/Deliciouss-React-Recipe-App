@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Tab } from "@mui/material";
+import { Box, Skeleton, Tab } from "@mui/material";
 import TabContext from "@mui/lab/TabContext";
 import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
@@ -48,13 +48,20 @@ const Tabs = ({ recipe }) => {
             <h3 dangerouslySetInnerHTML={{ __html: recipe.instructions }}></h3>
           </TabPanel>
           <TabPanel value="2" sx={{ padding: "0 10px" }}>
-            {recipe.extendedIngredients
-              ? recipe.extendedIngredients.map((ingrediant) => (
-                  <li key={ingrediant.id} className="ingrediant-list">
-                    {ingrediant.original}
-                  </li>
-                ))
-              : console.error("Error")}
+            {!recipe.extendedIngredients ? (
+              <Skeleton
+                variant="rounded"
+                animation="wave"
+                width={210}
+                height={60}
+              />
+            ) : (
+              recipe.extendedIngredients.map((ingrediant) => (
+                <li key={ingrediant.id} className="ingrediant-list">
+                  {ingrediant.original}
+                </li>
+              ))
+            )}
           </TabPanel>
         </TabContext>
       </Box>

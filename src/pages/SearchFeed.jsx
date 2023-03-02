@@ -40,6 +40,7 @@ const SearchFeed = () => {
 
   return (
     <Box>
+      <h3>Search Result for: {searchTerm}</h3>
       <Grid container spacing={2}>
         {feed.map((feed) => (
           <Grid item xs={2} md={3} lg={4} key={feed.id}>

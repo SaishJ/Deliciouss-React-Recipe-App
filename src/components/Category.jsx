@@ -17,7 +17,7 @@ const Category = () => {
       flexWrap="wrap"
     >
       {categories.map((category) => (
-        <NavLink to={`/cuisine/${category.name}`}>
+        <NavLink to={`/cuisine/${category.name}`} key={category.name}>
           <Chip
             style={{ cursor: "pointer", marginBottom: "5px" }}
             variant={
@@ -27,7 +27,6 @@ const Category = () => {
             }
             avatar=<Avatar>{category.icon}</Avatar>
             label={category.name}
-            key={category.name}
           />
         </NavLink>
       ))}
