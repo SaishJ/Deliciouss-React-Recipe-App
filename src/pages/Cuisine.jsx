@@ -11,6 +11,7 @@ import {
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import Cards from "../components/Cards";
 
 const Cuisine = () => {
   const [cuisine, setCuisine] = useState([]);
@@ -43,7 +44,7 @@ const Cuisine = () => {
     <Box>
       <Grid container spacing={2}>
         {cuisine.map((recipe) => (
-          <Grid item xs={2} md={3} lg={4} key={recipe.id}>
+          <Grid item xs={12} sm={6} md={4} lg={4} key={recipe.id}>
             <Link to={`/recipe/${recipe.id}`}>
               <motion.div
                 animate={{ opacity: 1 }}
@@ -51,36 +52,7 @@ const Cuisine = () => {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <Card sx={{ borderRadius: 0 }}>
-                  <CardMedia
-                    component="img"
-                    height="180"
-                    image={recipe.image}
-                    title={recipe.title}
-                  />
-                  <CardContent
-                    sx={{
-                      height: "70px",
-                      background: "transparent",
-                      padding: "10px",
-                    }}
-                  >
-                    <Typography
-                      variant="subtitle2"
-                      color="text.secondary"
-                      sx={{
-                        fontFamily: "Poppins",
-                        overflow: "hidden",
-                        textOverflow: "ellipsis",
-                        display: "-webkit-box",
-                        WebkitLineClamp: "2",
-                        WebkitBoxOrient: "vertical",
-                      }}
-                    >
-                      {recipe.title}
-                    </Typography>
-                  </CardContent>
-                </Card>
+                <Cards data={recipe} />
               </motion.div>
             </Link>
           </Grid>

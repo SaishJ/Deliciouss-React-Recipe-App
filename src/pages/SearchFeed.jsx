@@ -10,6 +10,7 @@ import {
   Typography,
 } from "@mui/material";
 import { Link } from "react-router-dom";
+import Cards from "../components/Cards";
 
 const SearchFeed = () => {
   const [feed, setFeed] = useState([]);
@@ -43,38 +44,9 @@ const SearchFeed = () => {
       <h3>Search Result for: {searchTerm}</h3>
       <Grid container spacing={2}>
         {feed.map((feed) => (
-          <Grid item xs={2} md={3} lg={4} key={feed.id}>
+          <Grid item xs={12} sm={6} md={4} lg={4} key={feed.id}>
             <Link to={`/recipe/${feed.id}`}>
-              <Card sx={{ borderRadius: 0 }}>
-                <CardMedia
-                  component="img"
-                  height="180"
-                  image={feed.image}
-                  title={feed.title}
-                />
-                <CardContent
-                  sx={{
-                    height: "70px",
-                    background: "transparent",
-                    padding: "10px",
-                  }}
-                >
-                  <Typography
-                    variant="subtitle2"
-                    sx={{
-                      fontFamily: "Poppins",
-                      overflow: "hidden",
-                      textOverflow: "ellipsis",
-                      display: "-webkit-box",
-                      WebkitLineClamp: "2",
-                      WebkitBoxOrient: "vertical",
-                      textAlign: "center",
-                    }}
-                  >
-                    {feed.title}
-                  </Typography>
-                </CardContent>
-              </Card>
+              <Cards data={feed} />
             </Link>
           </Grid>
         ))}
