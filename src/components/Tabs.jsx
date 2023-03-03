@@ -45,15 +45,26 @@ const Tabs = ({ recipe }) => {
             </TabList>
           </Box>
           <TabPanel value="1" sx={{ padding: "0 10px" }}>
-            <h3 dangerouslySetInnerHTML={{ __html: recipe.instructions }}></h3>
+            {!recipe.instructions ? (
+              <Skeleton
+                variant="text"
+                animation="wave"
+                width={480}
+                sx={{ fontSize: "1rem", marginTop: "10px" }}
+              />
+            ) : (
+              <h3
+                dangerouslySetInnerHTML={{ __html: recipe.instructions }}
+              ></h3>
+            )}
           </TabPanel>
           <TabPanel value="2" sx={{ padding: "0 10px" }}>
             {!recipe.extendedIngredients ? (
               <Skeleton
-                variant="rounded"
+                variant="text"
                 animation="wave"
-                width={210}
-                height={60}
+                width={480}
+                sx={{ fontSize: "1rem", marginTop: "10px" }}
               />
             ) : (
               recipe.extendedIngredients.map((ingrediant) => (
