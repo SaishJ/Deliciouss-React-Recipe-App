@@ -1,14 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import {
-  Box,
-  Grid,
-  Card,
-  CardMedia,
-  CardContent,
-  Typography,
-} from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import { Link } from "react-router-dom";
 import Cards from "../components/Cards";
 
@@ -40,7 +33,7 @@ const SearchFeed = () => {
   console.log("Term", searchTerm);
 
   return (
-    <Box>
+    <Box sx={{ marginBottom: "1rem" }}>
       <h3>Search Result for: {searchTerm}</h3>
       <Grid container spacing={2}>
         {feed.map((feed) => (

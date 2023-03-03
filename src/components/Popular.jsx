@@ -31,10 +31,9 @@ const Popular = () => {
   console.log(popular);
 
   return (
-    <div>
+    <div style={{ marginBottom: "1rem" }}>
       <h3>Popular Picks</h3>
       <Splide
-        style={{ marginBottom: "1rem" }}
         options={{
           perPage: 4,
           breakpoints: {
