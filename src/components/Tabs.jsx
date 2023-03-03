@@ -49,7 +49,7 @@ const Tabs = ({ recipe }) => {
               <Skeleton
                 variant="text"
                 animation="wave"
-                width={480}
+                width={{ md: 480 }}
                 sx={{ fontSize: "1rem", marginTop: "10px" }}
               />
             ) : (
@@ -63,7 +63,7 @@ const Tabs = ({ recipe }) => {
               <Skeleton
                 variant="text"
                 animation="wave"
-                width={480}
+                width={{ md: 480 }}
                 sx={{ fontSize: "1rem", marginTop: "10px" }}
               />
             ) : (

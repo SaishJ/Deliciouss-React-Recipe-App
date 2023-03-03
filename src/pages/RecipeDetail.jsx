@@ -4,6 +4,7 @@ import axios from "axios";
 import { Box, Stack, Skeleton, Typography } from "@mui/material";
 import Tabs from "../components/Tabs";
 import { motion } from "framer-motion";
+import { apiKey } from "../utils/constant";
 
 const RecipeDetail = () => {
   const [recipe, setRecipe] = useState([]);
@@ -12,7 +13,7 @@ const RecipeDetail = () => {
   useEffect(() => {
     axios
       .get(
-        `https://api.spoonacular.com/recipes/${searchTerm.id}/information?apiKey=${process.env.REACT_APP_API_KEY}`
+        `https://api.spoonacular.com/recipes/${searchTerm.id}/information?apiKey=${apiKey}`
       )
       .then((res) => setRecipe(res.data));
   }, []);

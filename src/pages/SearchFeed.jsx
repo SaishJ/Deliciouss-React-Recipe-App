@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { Box, Grid } from "@mui/material";
 import { Link } from "react-router-dom";
 import Cards from "../components/Cards";
+import { apiKey } from "../utils/constant";
 
 const SearchFeed = () => {
   const [feed, setFeed] = useState([]);
@@ -17,7 +18,7 @@ const SearchFeed = () => {
     } else {
       axios
         .get(
-          `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&query=${searchTerm}`
+          `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&query=${searchTerm}`
         )
         .then((res) =>
           localStorage.setItem(

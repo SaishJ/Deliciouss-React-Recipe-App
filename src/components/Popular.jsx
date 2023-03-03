@@ -4,6 +4,7 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import { Box, Card, CardMedia, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
+import { apiKey } from "../utils/constant";
 
 const Popular = () => {
   const [popular, setPopular] = useState([]);
@@ -16,7 +17,7 @@ const Popular = () => {
     } else {
       axios
         .get(
-          `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9`
+          `https://api.spoonacular.com/recipes/random?apiKey=${apiKey}&number=9`
         )
         .then((res) =>
           localStorage.setItem(

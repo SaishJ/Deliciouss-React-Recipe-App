@@ -5,6 +5,7 @@ import { Box, Grid } from "@mui/material";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Cards from "../components/Cards";
+import { apiKey } from "../utils/constant";
 
 const Cuisine = () => {
   const [cuisine, setCuisine] = useState([]);
@@ -18,7 +19,7 @@ const Cuisine = () => {
     } else {
       axios
         .get(
-          `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&cuisine=${params.type}`
+          `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&cuisine=${params.type}`
         )
         .then((res) =>
           localStorage.setItem(

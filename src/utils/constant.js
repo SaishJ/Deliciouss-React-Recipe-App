@@ -8,3 +8,5 @@ export const categories = [
   { name: "Japanese", icon: <GiChopsticks /> },
   { name: "Chinese", icon: <GiFastNoodles /> },
 ];
+
+export const apiKey = "f9c3d8fda07f41a3b4f408bb73e143ea";

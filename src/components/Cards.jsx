@@ -11,7 +11,7 @@ const Cards = ({ data }) => {
         alt={data.title}
       />
       <CardContent
-        sx={{ background: "#313131", height: "70px", padding: "10px" }}
+        sx={{ background: "#494949", height: "70px", padding: "10px" }}
       >
         <Typography variant="subtitle1" fontFamily="Poppins" color="#f1f1f1">
           {data.title}
