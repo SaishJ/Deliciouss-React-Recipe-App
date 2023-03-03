@@ -1,4 +1,4 @@
-## Deliciouss - The React Recipe App
+## Deliciouss - React Recipe App
 
 ![React](https://img.shields.io/badge/React_JS-20232A?style=for-the-badge&logo=react&logoColor=61DAFB "React JS")
 ![React Router](https://img.shields.io/badge/React_Router-20232A?style=for-the-badge&logo=react-router&logoColor=CA4245 "React Router")
