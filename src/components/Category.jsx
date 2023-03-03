@@ -5,7 +5,7 @@ import { categories } from "../utils/constant";
 
 const Category = () => {
   const location = useLocation();
-  console.log("Location", location);
+  // console.log("Location", location);
 
   return (
     <Stack

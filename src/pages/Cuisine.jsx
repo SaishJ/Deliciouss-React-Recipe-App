@@ -30,8 +30,8 @@ const Cuisine = () => {
     }
   }, [params.type]);
 
-  console.log("params", params);
-  console.log("cusine", cuisine);
+  // console.log("params", params);
+  // console.log("cusine", cuisine);
 
   return (
     <Box sx={{ marginBottom: "1rem" }}>

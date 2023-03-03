@@ -29,8 +29,8 @@ const SearchFeed = () => {
     }
   }, [searchTerm]);
 
-  console.log("Feed", feed);
-  console.log("Term", searchTerm);
+  // console.log("Feed", feed);
+  // console.log("Term", searchTerm);
 
   return (
     <Box sx={{ marginBottom: "1rem" }}>

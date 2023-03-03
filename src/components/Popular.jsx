@@ -28,7 +28,7 @@ const Popular = () => {
     }
   }, []);
 
-  console.log(popular);
+  // console.log(popular);
 
   return (
     <div style={{ marginBottom: "1rem" }}>
