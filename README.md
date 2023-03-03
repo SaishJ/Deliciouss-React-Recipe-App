@@ -1,6 +1,9 @@
 ## Deliciouss - The React Recipe App
 
-
+![React](https://img.shields.io/badge/React_JS-20232A?style=for-the-badge&logo=react&logoColor=61DAFB "React JS")
+![React Router](https://img.shields.io/badge/React_Router-20232A?style=for-the-badge&logo=react-router&logoColor=CA4245 "React Router")
+![Material UI](https://img.shields.io/badge/-Material%20UI-007FFF?logo=mui&logoColor=white&style=for-the-badge "Material UI")
+![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7 "Netlify")
 
 ### Home page
 ![screencapture-localhost-3000-2023-03-03-15_18_33](https://user-images.githubusercontent.com/59008917/222688342-241170f5-7ea5-439f-b94e-a9439ba582d3.png)
